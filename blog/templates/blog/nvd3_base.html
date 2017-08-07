@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+    {% load static %}
+    {% load nvd3_tags %}
+    <!--{% load nvd3_tags %} -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="Wang Dong" content="USTB-Memeory">
+    <link rel="icon" href="{% static 'pictures/ustb.ico' %}">
+    <link rel="stylesheet" href ="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href ="{% static 'css/bootstrap-theme.min.css' %}">
+    <title>USTB-Maintenance-data-mining-system</title>
+
+    <!-- Bootstrap core CSS -->
+    <!-- Here I use the local css file rather than the online bootstrap -->
+    <!--<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">-->
+    <!-- Bootstrap theme -->    
+    <!--<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css"  rel="stylesheet"> -->
+    <!--<link rel="stylesheet" href="{% static 'css/blog.css' %}"> -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!--<link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
+
+    <!-- Custom styles for this template -->
+    <!--<link href="theme.css" rel="stylesheet"> -->
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!--<script src="../../assets/js/ie-emulation-modes-warning.js"></script> -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body role="document">
+
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">        	
+USTB       </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#Peeks">Peeks</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Schools <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="http://saee.ustb.edu.cn/">one</a></li>
+                <li><a href="http://me.ustb.edu.cn/">two</a></li>
+                <li><a href="http://metall.ustb.edu.cn/">three</a></li>       
+                <li><a href="http://sfs.ustb.edu.cn/">four</a></li>
+                <li><a href="http://scce.ustb.edu.cn/">five</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container theme-showcase" role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Maintenance-DM-System</h1>
+        <div class="row">
+        	
+        <div class="col-md-9">
+        	        <p>Big data age is coming to us without giving you any signal,the tech giants FLAGS are competing for the data-mining market,
+                        and this is a data-visualization of the data-mining by WANG DONG .</p>
+        <div >
+        <h2>Chart Types</h2>
+      </div>
+      <p>
+      	<a href="{% url 'multibarchart' %}" > <button type="button" class="btn btn-lg btn-primary">Bar-Chart </button> </a>
+        <a href="{% url 'multibarchart' %}"> <button type="button" class="btn btn-lg btn-primary">Multibar-Chart</button></a>
+        <a href="http://metall.ustb.edu.cn"><button type="button" class="btn btn-lg btn-primary">DiscreteBar-Chart </button></a>
+        <a href="http://sfs.ustb.edu.cn"> <button type="button" class="btn btn-lg btn-primary">Cumu-Chart</button></a>
+        <a href="{% url 'scatterchart' %}"><button type="button" class="btn btn-lg btn-primary">Scatter-Chart</button></a>
+      </p>  
+                
+
+      </div>
+        	
+        <div class="col-md-2">
+        	<img  alt="Brand" src='{% static 'pictures/ustb.jpg' %}' style="hight:100px">
+       	</div>
+        
+      
+       </div></div>
+
+    
+ <!--
+      <div class="page-header">
+        <h1>Details-By-Day(2013/09)</h1>
+      </div> -->
+      <div style="text-align:center">
+      <h1>Details-By-Day(2013/09)</h1> </div>
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>One</th>
+                <th>Two</th>
+                <th>Three</th>
+                <th>Four</th>
+                <th>Five</th>
+                <th>Six</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td><a href="{% url 'result_detail_date' date=1 %}" >01</a></td>
+                <td><a href="{% url 'result_detail_date' date=2 %}" >02</a></td>
+                <td><a href="{% url 'result_detail_date' date=3 %}" >03</a></td>
+                <td><a href="{% url 'result_detail_date' date=4 %}" >04</a></td>
+                <td><a href="{% url 'result_detail_date' date=5 %}" >05</a></td>
+                <td><a href="{% url 'result_detail_date' date=6 %}" >06</a></td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td><a href="{% url 'result_detail_date' date=7 %}" >07</a></td>
+                <td><a href="{% url 'result_detail_date' date=8 %}" >08</a></td>
+                <td><a href="{% url 'result_detail_date' date=9 %}" >09</a></td>
+                <td><a href="{% url 'result_detail_date' date=10 %}" >10</a></td>
+                <td><a href="{% url 'result_detail_date' date=11 %}" >11</a></td>
+                <td><a href="{% url 'result_detail_date' date=12 %}" >12</a></td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td><a href="{% url 'result_detail_date' date=13 %}" >13</a></td>
+                <td><a href="{% url 'result_detail_date' date=14 %}" >14</a></td>
+                <td><a href="{% url 'result_detail_date' date=15 %}" >15</a></td>
+                <td><a href="{% url 'result_detail_date' date=16 %}" >16</a></td>
+                <td><a href="{% url 'result_detail_date' date=17 %}" >17</a></td>
+                <td><a href="{% url 'result_detail_date' date=18 %}" >18</a></td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td><a href="{% url 'result_detail_date' date=19 %}" >19</a></td>
+                <td><a href="{% url 'result_detail_date' date=20 %}" >20</a></td>
+                <td><a href="{% url 'result_detail_date' date=21 %}" >21</a></td>
+                <td><a href="{% url 'result_detail_date' date=22 %}" >22</a></td>
+                <td><a href="{% url 'result_detail_date' date=23 %}" >23</a></td>
+                <td><a href="{% url 'result_detail_date' date=24 %}" >24</a></td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td><a href="{% url 'result_detail_date' date=25 %}" >25</a></td>
+                <td><a href="{% url 'result_detail_date' date=26 %}" >26</a></td>
+                <td><a href="{% url 'result_detail_date' date=27 %}" >27</a></td>
+                <td><a href="{% url 'result_detail_date' date=28 %}" >28</a></td>
+                <td><a href="{% url 'result_detail_date' date=29 %}" >29</a></td>
+                <td><a href="{% url 'result_detail_date' date=30 %}" >30</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+</div>
+
+
+<!-- JAVASCRIPT to clear search text when the field is clicked -->
+<script type="text/javascript">
+window.onload = function(){ 
+	//Get submit button
+	var submitbutton = document.getElementById("tfq");
+	//Add listener to submit button
+	if(submitbutton.addEventListener){
+		submitbutton.addEventListener("click", function() {
+			if (submitbutton.value == 'Search our website'){//Customize this text string to whatever you want
+				submitbutton.value = '';
+			}
+		});
+	}
+}
+</script>
+
+
+
+	<!-- HTML for SEARCH BAR -->
+  <a id="search_box">
+	<div id="tfheader" align="center">
+		<form id="tfnewsearch" method="get" action="/search">
+		        <input type="text" id="tfq" class="tftextinput2" name="q" size="21" maxlength="120" value="Search here!"><input type="submit" value=">" class="tfbutton2">
+		</form>
+		<div class="tfclear"></div>
+	</div>
+  </a>
+    <br/>
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: {
+     equationNumbers: {  autoNumber: "AMS"  },
+     extensions: ["AMSmath.js", "AMSsymbols.js", "autobold.js", "color.js"]
+  }
+});
+  </script>
+<script type="text/javascript" src=
+"http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!--<div align="center">
+    <h2> the autoregression equation for the rule is: \(
+        f(z)=(1-0.174957*z^(-1)+2*0.210468*z^(-2)-4.7*-0.221964*z^(-3)+...
+        \)
+              
+        <!--</h2></div>  -->
+
+
+
+
+
+{% block content %}
+{% endblock %}
+
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    -->
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <!--<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
+  </body>
+</html>

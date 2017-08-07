@@ -1,0 +1,17 @@
+ 
+ {% extends 'blog/nvd3_base.html' %}
+  
+
+{% block content %}
+{% include_chart_jscss %}
+    {% load_chart charttype chartdata "lineplusbarchart_container" extra %}
+
+<div  style="text-align:center">
+	      <h1>Frequent items: C2,B2 </h1>
+          <h2> It is just a linepluschart example of the suppor change of a frequent item </h2>
+          </div>
+          <div align="center">
+    {% include_container "lineplusbarchart_container" 400 600 %}
+    {% endblock content %}
+            </div>
+

@@ -1,0 +1,13 @@
+
+{% extends 'blog/nvd3_base.html' %}
+{% block content %}
+ {% include_chart_jscss %}
+   {% load_chart charttype chartdata "multibarchart_container" %}
+   <div  style="text-align:center">
+	      <h1>trend barplot for the selected rules </h1>
+          <h2> It is just a barplot example of the suppor change of a frequent item </h2>
+          </div>
+          <div align="center">   
+    {% include_container "multibarchart_container" 300 800 %}    
+    {% endblock content %}
+          </div>

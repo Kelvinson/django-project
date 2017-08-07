@@ -1,0 +1,33 @@
+ 
+ {% extends 'blog/nvd3_base.html' %}
+     <!--{% load nvd3_tags %} -->
+     {% block content %}
+      {% include_chart_jscss %}
+   <!-- <div class="row"> -->
+  <!--      <div class ="col-md-6"> -->
+    
+        {% load_chart charttype chartdata chartcontainer extra %}
+        
+         <!--<div class="page-header" style="text-align:center"> -->
+             <div  style="text-align:center">
+	      <h1>Frequent items: C2,B2 </h1>
+          <h2> piechart for the association rules you selected </h2>
+          </div>
+          <div align="center">
+	        {% include_container chartcontainer 500 600 %}
+            {% endblock content %}
+            </div>
+            
+            
+       <!--     </div>  -->
+      <!--      <div class="col-md-6">
+            {% load_chart charttype chartdata "multibarchart_container" %}
+            <div class="page-header">
+	      <h1>Frequent items: C2,B2 </h1>
+          <h2> It is just a barchart example of the suppor change of a frequent item </h2>
+          </div>
+        {% include_container "multibarchart_container" 400 600 %}
+                </div> -->
+        <!--    </div> -->
+
+

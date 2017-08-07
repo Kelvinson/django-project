@@ -1,0 +1,26 @@
+   
+</head>
+<body>
+   
+</body>
+
+{% extends 'blog/nvd3_base.html' %}
+     <!--{% load nvd3_tags %} -->
+     {% block content %}
+      {% include_chart_jscss %}
+   <!-- <div class="row"> -->
+  <!--      <div class ="col-md-6"> -->
+    
+     
+         {% load_chart charttype chartdata "scatterchart_container" %}
+         <!--<div class="page-header" style="text-align:center"> -->
+             <div  style="text-align:center">
+	      <h1>Frequent items: C2,B2 </h1>
+          <h2> It is just a scatterchart example of the suppor change of a frequent item </h2>
+          </div>
+          <div align="center">
+	   
+             {% include_container "scatterchart_container" 300 800 %}
+            {% endblock content %}
+            </div>
+            
